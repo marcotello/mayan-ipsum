@@ -37,9 +37,13 @@
   <div class="flex justify-end gap-4">
     <button
       type="button"
-      class="flex items-center justify-center rounded-xl h-10 px-4 bg-primary hover:bg-primary/90 text-background-dark text-sm font-bold transition-all shadow-lg shadow-primary/20"
+      class="group flex items-center justify-center rounded-xl h-10 px-4 bg-primary hover:bg-primary/90 text-background-dark text-sm font-bold transition-all transform hover:-translate-y-0.5 shadow-lg shadow-primary/20 hover:shadow-[0_0_20px_rgba(17,212,98,0.5)]"
     >
-      <span class="material-symbols-outlined mr-2 text-lg">refresh</span>
+      <span
+        class="material-symbols-outlined mr-2 text-lg group-hover:rotate-180 transition-transform duration-500"
+      >
+        refresh
+      </span>
       <span>Generate New</span>
     </button>
   </div>
