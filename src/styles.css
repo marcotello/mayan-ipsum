@@ -1,3 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import "tailwindcss";
+
+@theme {
+  --color-primary: #11d462;
+  --color-background-light: #f6f8f7;
+  --color-background-dark: #102218;
+  --color-mayan-gold: #FFC107;
+  --color-mayan-teal: #009688;
+  --color-mayan-red: #D32F2F;
+  --color-mayan-stone: #263238;
+  --font-display: "Space Grotesk", sans-serif;
+}
