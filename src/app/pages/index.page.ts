@@ -45,19 +45,7 @@ type TextLength = 'S' | 'M' | 'L';
         <!-- Hero Section -->
         <div class="max-w-[800px] w-full text-center mb-8">
           <h1 class="text-white text-3xl md:text-5xl font-black leading-tight tracking-tight mb-2">
-            <span class="text-transparent bg-clip-text bg-linear-to-r from-primary to-mayan-teal">Traditional Kʼicheʼ</span> Text
-          </h1>
-          <h1 class="text-white text-3xl md:text-5xl font-black leading-tight tracking-tight mb-2">
             <span class="text-transparent bg-clip-text bg-linear-to-r from-primary to-mayan-teal">Generate Traditional Mayan</span> Text
-          </h1>
-          <h1 class="text-white text-3xl md:text-5xl font-black leading-tight tracking-tight mb-2">
-            Mayan Ipsum <span class="text-transparent bg-clip-text bg-linear-to-r from-primary to-mayan-teal">Generator</span> 
-          </h1>
-          <h1 class="text-white text-3xl md:text-5xl font-black leading-tight tracking-tight mb-2">
-            <span class="text-transparent bg-clip-text bg-linear-to-r from-primary to-mayan-teal">Mayan Ipsum Generator</span> 
-          </h1>
-          <h1 class="text-white text-3xl md:text-5xl font-black leading-tight tracking-tight mb-2">
-            <span class="text-transparent bg-clip-text bg-linear-to-r from-primary to-mayan-teal">Mayan Ipsum</span> Generator
           </h1>
           <p class="text-slate-300 text-sm md:text-base font-normal max-w-lg mx-auto">
             From the sacred Popol Vuh. Use this generated text for your designs to evoke the spirit of the Maya.
