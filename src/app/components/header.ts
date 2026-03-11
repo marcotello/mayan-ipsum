@@ -1,8 +1,10 @@
 import { Component, ChangeDetectionStrategy, output } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-header',
   changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [RouterLink],
   host: {
     'class': 'block sticky top-0 z-50',
   },
@@ -15,8 +17,8 @@ import { Component, ChangeDetectionStrategy, output } from '@angular/core';
         <h2 class="text-white text-xl font-bold leading-tight tracking-[-0.015em] hidden sm:block">Mayan Ipsum</h2>
       </div>
       <nav class="hidden md:flex items-center gap-9 flex-1 justify-center">
-        <a class="text-white/80 hover:text-primary transition-colors text-sm font-medium" href="#">Home</a>
-        <a class="text-white/80 hover:text-primary transition-colors text-sm font-medium" href="#">About Popol Vuh</a>
+        <a class="text-white/80 hover:text-primary transition-colors text-sm font-medium" routerLink="/">Home</a>
+        <a class="text-white/80 hover:text-primary transition-colors text-sm font-medium" routerLink="/about-popol-vuh">About Popol Vuh</a>
         <a class="text-white/80 hover:text-primary transition-colors text-sm font-medium" href="#">Contact</a>
       </nav>
       <div class="flex justify-end gap-4">
