@@ -39,7 +39,7 @@ body {
 
 .parchment-texture {
   background-color: #fff8e1;
-  background-image: radial-gradient(#ffe0b2 1px, transparent 1px), radial-gradient(#ffcc80 1px, transparent 1px);
+  background-image: radial-gradient(#ffffff 1px, transparent 1px), radial-gradient(#eeecea 1px, transparent 1px);
   background-size: 20px 20px;
   background-position: 0 0, 10px 10px;
 }
