@@ -10,12 +10,14 @@ import { RouterLink } from '@angular/router';
   },
   template: `
     <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-primary/20 bg-bg-dark/95 backdrop-blur-sm px-6 py-4 lg:px-12">
-      <div class="flex items-center gap-4 text-white">
-        <div class="size-8 text-primary">
-          <span class="material-symbols-outlined text-4xl!">temple_hindu</span>
+      <a routerLink="/">  
+        <div class="flex items-center gap-4 text-white">
+          <div class="size-8 text-primary">
+            <span class="material-symbols-outlined text-4xl!">temple_hindu</span>
+          </div>
+          <h2 class="text-white text-xl font-bold leading-tight tracking-[-0.015em] hidden sm:block">Mayan Ipsum</h2>
         </div>
-        <h2 class="text-white text-xl font-bold leading-tight tracking-[-0.015em] hidden sm:block">Mayan Ipsum</h2>
-      </div>
+      </a>
       <nav class="hidden md:flex items-center gap-9 flex-1 justify-center">
         <a class="text-white/80 hover:text-primary transition-colors text-sm font-medium" routerLink="/">Home</a>
         <a class="text-white/80 hover:text-primary transition-colors text-sm font-medium" routerLink="/about-popol-vuh">About Popol Vuh</a>

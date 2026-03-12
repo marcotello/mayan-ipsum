@@ -10,7 +10,11 @@ import { RouterLink } from '@angular/router';
     'class': 'block',
   },
   template: `
-    <main class="grow">
+    <main class="grow mayan-pattern relative">
+      <div class="absolute inset-0 overflow-hidden pointer-events-none">
+        <div class="absolute top-130 left-10 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-20 right-10 w-96 h-96 bg-mayan-teal/10 rounded-full blur-3xl"></div>
+      </div>
       <!-- Hero Section -->
       <section class="relative h-[400px] flex items-end overflow-hidden">
         <div class="absolute inset-0 bg-linear-to-t from-bg-dark via-bg-dark/40 to-transparent z-10"></div>
@@ -24,7 +28,9 @@ import { RouterLink } from '@angular/router';
           />
         </div>
         <div class="relative z-20 max-w-4xl mx-auto px-6 pb-12 text-center">
-          <h1 class="text-4xl md:text-6xl font-bold text-white mb-4 drop-shadow-lg">About the Sacred Popol Vuh</h1>
+          <h1 class="text-white text-3xl md:text-5xl font-black leading-tight tracking-tight mb-2">
+            <span class="text-transparent bg-clip-text bg-linear-to-r from-primary to-mayan-teal">About the Sacred</span> Popol Vuh
+          </h1>
           <div class="inline-block px-4 py-1 bg-primary text-bg-dark font-bold rounded-full text-sm uppercase tracking-widest">The Council Book</div>
         </div>
       </section>
