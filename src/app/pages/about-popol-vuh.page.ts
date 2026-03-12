@@ -54,9 +54,9 @@ import { RouterLink } from '@angular/router';
               What is the Popol Vuh?
             </h2>
             <p class="leading-relaxed text-slate-300">
-              The Popol Vuh, or "Book of the People," is a foundational sacred text of the Kʼicheʼ Maya
+              The Popol Vuh, or "Book of the People," is a foundational sacred text of the Mayan
               people. It is a masterpiece of world literature that preserves the profound mythology,
-              spiritual wisdom, and history of the ancestors who lived in the highlands of present-day Guatemala.
+              spiritual wisdom, and history of the ancestors who lived in the highlands of the Mayan world.
             </p>
           </div>
           <div class="relative flex justify-center">
@@ -148,7 +148,7 @@ export default class AboutPopolVuh {
     },
     {
       icon: 'history_edu',
-      title: 'Kʼicheʼ Lineage',
+      title: 'Mayan Lineage',
       description:
         'A detailed account of the genealogy and migrations of the Kʼicheʼ Maya tribes up until the Spanish conquest.',
     },

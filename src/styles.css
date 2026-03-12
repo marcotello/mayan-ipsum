@@ -2,6 +2,12 @@
 
 @theme {
   --color-primary: #11d462;
+  --color-primary-dark: #0ea64d;
+  --color-background-light: #f6f8f7;
+  --color-background-dark: #112218;
+  --color-surface-dark: #193324;
+  --color-border-dark: #234833;
+  --color-text-muted: #92c9a9;
   --color-bg-light: #f6f8f7;
   --color-bg-dark: #102218;
   --color-mayan-gold: #FFC107;
