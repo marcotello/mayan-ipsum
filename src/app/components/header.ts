@@ -1,5 +1,6 @@
-import { Component, ChangeDetectionStrategy, output } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Component, ChangeDetectionStrategy, inject } from '@angular/core';
+import { RouterLink, Router } from '@angular/router';
+import { IpsumStateService } from '../services/ipsum-state.service';
 
 @Component({
   selector: 'app-header',
@@ -25,7 +26,7 @@ import { RouterLink } from '@angular/router';
       </nav>
       <div class="flex justify-end gap-4">
         <button
-          (click)="generateClick.emit()"
+          (click)="onGenerateClick()"
           class="flex items-center justify-center rounded-xl h-10 px-4 bg-primary hover:bg-primary/90 text-bg-dark text-sm font-bold transition-all shadow-lg shadow-primary/20 cursor-pointer hover:-translate-y-0.5"
         >
           <span class="material-symbols-outlined mr-2 text-lg">refresh</span>
@@ -36,5 +37,13 @@ import { RouterLink } from '@angular/router';
   `,
 })
 export class Header {
-  generateClick = output<void>();
+  private readonly router = inject(Router);
+  private readonly ipsumState = inject(IpsumStateService);
+
+  onGenerateClick() {
+    this.ipsumState.triggerGeneration();
+    if (this.router.url !== '/') {
+      this.router.navigate(['/']);
+    }
+  }
 }

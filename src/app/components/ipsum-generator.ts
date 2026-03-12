@@ -1,5 +1,6 @@
-import { Component, ChangeDetectionStrategy, signal, computed } from '@angular/core';
+import { Component, ChangeDetectionStrategy, signal, computed, inject } from '@angular/core';
 import { NgOptimizedImage } from '@angular/common';
+import { IpsumStateService } from '../services/ipsum-state.service';
 
 const KICHE_PARAGRAPHS_SHORT = [
   `Are u' paxik, u' c'aslemal ri', ri' u' tz'ibaxik. Wa'e' k'ut u' ch'a'tem, u' tzijoxik ri' chi'. Are u' xebal, u' tikarib'al, u' jek'al wuj.`,
@@ -161,15 +162,16 @@ type TextLength = 'S' | 'M' | 'L';
   `,
 })
 export class IpsumGenerator {
+  private readonly ipsumState = inject(IpsumStateService);
+
   readonly sizes: TextLength[] = ['S', 'M', 'L'];
 
   paragraphCount = signal(3);
   textLength = signal<TextLength>('S');
-  seed = signal(0);
   copied = signal(false);
 
   displayedParagraphs = computed(() => {
-    this.seed();
+    this.ipsumState.generateTrigger();
     const pool = this.getPool();
     const count = this.paragraphCount();
     const shuffled = this.shuffle([...pool]);
@@ -193,7 +195,7 @@ export class IpsumGenerator {
   }
 
   regenerate() {
-    this.seed.update((s) => s + 1);
+    this.ipsumState.triggerGeneration();
   }
 
   async copyToClipboard() {
@@ -226,7 +228,7 @@ export class IpsumGenerator {
   }
 
   private shuffle<T>(arr: T[]): T[] {
-    let seed = this.seed() + 1;
+    let seed = this.ipsumState.generateTrigger() + 1;
     for (let i = arr.length - 1; i > 0; i--) {
       seed = (seed * 16807 + 0) % 2147483647;
       const j = seed % (i + 1);
