@@ -17,14 +17,23 @@ import { RouterLink } from '@angular/router';
       </div>
       <!-- Hero Section -->
       <section class="relative h-[400px] flex items-end overflow-hidden">
-        <div class="absolute inset-0 bg-linear-to-t from-bg-dark via-bg-dark/40 to-transparent z-10"></div>
         <div class="absolute inset-0">
           <img
-            ngSrc="/images/popol-vuh-hero.jpg"
-            alt="Mayan jungle with a stepped pyramid and exotic birds"
+            ngSrc="/images/mayan-wall.webp"
+            alt="Mayan wall texture"
             fill
             priority
             class="object-cover object-center"
+          />
+        </div>
+        <div class="absolute inset-0 bg-linear-to-t from-bg-dark via-bg-dark/40 to-transparent z-10"></div>
+        <div class="absolute inset-0 bg-linear-to-b from-transparent to-[#172e23]">
+          <img
+            ngSrc="/images/popol.png"
+            alt="Mayan talking to a god"
+            fill
+            priority
+            class="object-contain object-top scale-64 origin-top"
           />
         </div>
         <div class="relative z-20 max-w-4xl mx-auto px-6 pb-12 text-center">
