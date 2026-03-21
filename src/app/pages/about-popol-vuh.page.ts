@@ -40,7 +40,7 @@ import { RouterLink } from '@angular/router';
           <h1 class="text-white text-3xl md:text-5xl font-black leading-tight tracking-tight mb-2">
             <span class="text-transparent bg-clip-text bg-linear-to-r from-primary to-mayan-teal">About the Sacred</span> Popol Vuh
           </h1>
-          <div class="inline-block px-4 py-1 bg-primary text-bg-dark font-bold rounded-full text-sm uppercase tracking-widest">The Council Book</div>
+          <div class="inline-block px-4 py-1 bg-mayan-gold text-bg-dark font-bold rounded-full text-sm uppercase tracking-widest">The Council Book</div>
         </div>
       </section>
 
@@ -73,14 +73,16 @@ import { RouterLink } from '@angular/router';
         </div>
 
         <!-- Feature Cards -->
-        <div class="grid md:grid-cols-3 gap-6">
+        <div class="grid md:grid-cols-3 gap-4">
           @for (card of featureCards; track card.title) {
-            <div class="border border-mayan-stone/50 p-6 rounded-xl hover:bg-primary/5 transition-colors group">
-              <div class="text-mayan-gold mb-4">
-                <span class="material-symbols-outlined text-4xl!">{{ card.icon }}</span>
+            <div class="group flex flex-col gap-4 rounded-xl border border-border-dark bg-surface-dark p-6 transition-all hover:border-primary/50 hover:bg-surface-dark/80">
+              <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-mayan-gold/10 text-mayan-gold group-hover:bg-mayan-gold group-hover:text-background-dark transition-colors">
+                <span class="material-symbols-outlined text-2xl">{{ card.icon }}</span>
               </div>
-              <h3 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors">{{ card.title }}</h3>
-              <p class="text-sm text-slate-400">{{ card.description }}</p>
+              <div class="flex flex-col gap-2">
+                <h3 class="text-white text-lg font-bold leading-tight">{{ card.title }}</h3>
+                <p class="text-text-muted text-sm font-normal leading-relaxed">{{ card.description }}</p>
+              </div>
             </div>
           }
         </div>

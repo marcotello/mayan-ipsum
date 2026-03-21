@@ -25,7 +25,6 @@ import { IpsumStateService } from '../services/ipsum-state.service';
         <a class="text-white/80 hover:text-primary transition-colors text-sm font-medium" routerLink="/">Home</a>
         <a class="text-white/80 hover:text-primary transition-colors text-sm font-medium" routerLink="/home2">Home 2</a>
         <a class="text-white/80 hover:text-primary transition-colors text-sm font-medium" routerLink="/about-popol-vuh">About Popol Vuh</a>
-        <a class="text-white/80 hover:text-primary transition-colors text-sm font-medium" href="#">Contact</a>
       </nav>
       
       <!-- Desktop Actions -->
