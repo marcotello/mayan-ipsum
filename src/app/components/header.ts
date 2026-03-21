@@ -23,7 +23,6 @@ import { IpsumStateService } from '../services/ipsum-state.service';
       <!-- Desktop Navigation -->
       <nav class="hidden md:flex items-center gap-9 flex-1 justify-center relative z-20">
         <a class="text-white/80 hover:text-primary transition-colors text-sm font-medium" routerLink="/">Home</a>
-        <a class="text-white/80 hover:text-primary transition-colors text-sm font-medium" routerLink="/home2">Home 2</a>
         <a class="text-white/80 hover:text-primary transition-colors text-sm font-medium" routerLink="/about-popol-vuh">About Popol Vuh</a>
       </nav>
       

@@ -47,92 +47,109 @@ import { RouterLink } from '@angular/router';
       <!-- Content Sections -->
       <section class="max-w-5xl mx-auto px-6 py-16 space-y-12">
         <!-- What is the Popol Vuh? -->
-        <div class="grid md:grid-cols-2 gap-12 items-center">
-          <div class="about-card p-8 rounded-xl shadow-2xl border-l-8 border-primary">
-            <h2 class="text-2xl font-bold text-primary mb-4 flex items-center gap-2">
-              <span class="material-symbols-outlined">auto_stories</span>
-              What is the Popol Vuh?
-            </h2>
-            <p class="leading-relaxed text-slate-300">
-              The Popol Vuh, or "Book of the People," is a foundational sacred text of the Mayan
-              people. It is a masterpiece of world literature that preserves the profound mythology,
-              spiritual wisdom, and history of the ancestors who lived in the highlands of the Mayan world.
-            </p>
-          </div>
-          <div class="relative flex justify-center">
-            <div class="w-64 h-64 bg-primary/10 rounded-full flex items-center justify-center border-4 border-dashed border-primary/30 overflow-hidden">
-              <img
-                ngSrc="/images/mayan-glyph.jpg"
-                alt="Mayan stone glyph representing wisdom"
-                width="192"
-                height="192"
-                class="opacity-80"
-              />
+        <div class="relative group mb-35">
+          <div class="absolute -top-3 -left-3 w-12 h-12 border-t-4 border-l-4 border-mayan-gold rounded-tl-xl z-20"></div>
+          <div class="absolute -top-3 -right-3 w-12 h-12 border-t-4 border-r-4 border-mayan-gold rounded-tr-xl z-20"></div>
+          <div class="absolute -bottom-3 -left-3 w-12 h-12 border-b-4 border-l-4 border-mayan-gold rounded-bl-xl z-20"></div>
+          <div class="absolute -bottom-3 -right-3 w-12 h-12 border-b-4 border-r-4 border-mayan-gold rounded-br-xl z-20"></div>
+
+          <div class="parchment-texture rounded-xl shadow-2xl overflow-hidden border-4 border-mayan-stone relative">
+            <div class="p-8 md:p-12 flex flex-col md:flex-row items-center gap-10">
+              <div class="flex-1 space-y-4">
+                <h2 class="text-3xl font-bold text-mayan-stone font-display flex items-center gap-2">
+                  What is the Popol Vuh?
+                </h2>
+                <p class="text-stone-700 leading-relaxed">
+                  The Popol Vuh, or "Book of the People," is a foundational sacred text of the Mayan
+                  people. It is a masterpiece of world literature that preserves the profound mythology,
+                  spiritual wisdom, and history of the ancestors who lived in the highlands of the Mayan world.
+                </p>
+              </div>
+              <div class="w-full md:w-1/3 aspect-video md:aspect-square rounded-xl shadow-xl overflow-hidden relative border-2 border-mayan-stone/20">
+                <img
+                  ngSrc="/images/mayan-glyph.jpg"
+                  alt="Mayan stone glyph representing wisdom"
+                  fill
+                  class="object-cover"
+                />
+              </div>
             </div>
           </div>
         </div>
 
         <!-- Feature Cards -->
-        <div class="grid md:grid-cols-3 gap-4">
-          @for (card of featureCards; track card.title) {
-            <div class="group flex flex-col gap-4 rounded-xl border border-border-dark bg-surface-dark p-6 transition-all hover:border-primary/50 hover:bg-surface-dark/80">
-              <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-mayan-gold/10 text-mayan-gold group-hover:bg-mayan-gold group-hover:text-background-dark transition-colors">
-                <span class="material-symbols-outlined text-2xl">{{ card.icon }}</span>
+        <div class="flex flex-col gap-10 py-5 @container mb-35">
+          <div class="flex flex-col gap-4 text-center md:text-left">
+            <h2 class="text-white tracking-tight text-3xl font-bold leading-tight max-w-[720px]">
+              How is the Book Organized?
+            </h2>
+            <p class="text-text-muted text-base font-normal leading-normal max-w-[720px]">
+              The text is typically organized into a preamble and four main sections based on the 1861 arrangement by Charles-Étienne Brasseur de Bourbourg
+            </p>
+          </div> 
+          <div class="grid md:grid-cols-3 gap-4">
+            @for (card of featureCards; track card.title) {
+              <div class="group flex flex-col gap-4 rounded-xl border border-border-dark bg-surface-dark p-6 transition-all hover:border-primary/50 hover:bg-surface-dark/80">
+                <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-mayan-gold/10 text-mayan-gold group-hover:bg-mayan-gold group-hover:text-background-dark transition-colors">
+                  <span class="material-symbols-outlined text-2xl">{{ card.icon }}</span>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <h3 class="text-white text-lg font-bold leading-tight">{{ card.title }}</h3>
+                  <p class="text-text-muted text-sm font-normal leading-relaxed">{{ card.description }}</p>
+                </div>
               </div>
-              <div class="flex flex-col gap-2">
-                <h3 class="text-white text-lg font-bold leading-tight">{{ card.title }}</h3>
-                <p class="text-text-muted text-sm font-normal leading-relaxed">{{ card.description }}</p>
-              </div>
-            </div>
-          }
+            }
+          </div>
+        </div>
+
+        <!-- Quote -->
+        <div class="mb-35">  
+          <blockquote class="border-l-4 border-mayan-gold pl-6 py-4 my-4">
+            <p class="text-xl md:text-2xl italic font-serif text-slate-300 leading-relaxed">
+              "The gods said <span class="text-mayan-gold font-bold">'Earth'</span>, and the earth was formed like a cloud or a mist."
+            </p>
+            <cite class="block mt-3 text-sm text-mayan-gold/70 not-italic uppercase tracking-widest">— Popol Vuh</cite>
+          </blockquote>
         </div>
 
         <!-- The Jungle's Memory -->
-        <div class="bg-primary/10 rounded-2xl overflow-hidden border border-primary/20">
-          <div class="p-8 md:p-12 flex flex-col md:flex-row items-center gap-10">
-            <div class="flex-1 space-y-4">
-              <h2 class="text-3xl font-bold text-white">The Jungle's Memory</h2>
-              <p class="text-slate-300">
-                Just as the jungle thrives with interconnected life, the Popol Vuh connects the Maya
-                people to their celestial and terrestrial origins. Every glyph tells a story of survival,
-                magic, and the eternal cycle of time.
-              </p>
-              <a
-                routerLink="/"
-                class="bg-primary hover:bg-primary/80 text-bg-dark px-6 py-2 rounded-lg font-bold transition-all inline-flex items-center gap-2"
-              >
-                Discover More Stories
-                <span class="material-symbols-outlined">arrow_forward</span>
-              </a>
-            </div>
-            <div class="w-full md:w-1/3 aspect-video md:aspect-square rounded-xl shadow-xl overflow-hidden relative">
-              <img
-                ngSrc="/images/hero-twins.jpg"
-                alt="Hunahpu and Xbalanque playing the ritual ballgame"
-                fill
-                class="object-cover"
-              />
+        <div class="relative group mb-20">
+          <div class="absolute -top-3 -left-3 w-12 h-12 border-t-4 border-l-4 border-mayan-gold rounded-tl-xl z-20"></div>
+          <div class="absolute -top-3 -right-3 w-12 h-12 border-t-4 border-r-4 border-mayan-gold rounded-tr-xl z-20"></div>
+          <div class="absolute -bottom-3 -left-3 w-12 h-12 border-b-4 border-l-4 border-mayan-gold rounded-bl-xl z-20"></div>
+          <div class="absolute -bottom-3 -right-3 w-12 h-12 border-b-4 border-r-4 border-mayan-gold rounded-br-xl z-20"></div>
+
+          <div class="parchment-texture rounded-xl shadow-2xl overflow-hidden border-4 border-mayan-stone relative">
+            <div class="p-8 md:p-12 flex flex-col md:flex-row items-center gap-10">
+              <div class="flex-1 space-y-4">
+                <h2 class="text-3xl font-bold text-mayan-stone font-display">The Jungle's Memory</h2>
+                <p class="text-stone-700 leading-relaxed">
+                  Just as the jungle thrives with interconnected life, the Popol Vuh connects the Maya
+                  people to their celestial and terrestrial origins. Every glyph tells a story of survival,
+                  magic, and the eternal cycle of time.
+                </p>
+                <img
+                  ngSrc="/images/popol-vuh.png"
+                  alt="Popol Vuh Illustration"
+                  width="800"
+                  height="400"
+                  class="w-full object-cover rounded-xl shadow-md border-2 border-mayan-stone/20 my-4"
+                />
+                <a
+                  routerLink="/"
+                  class="bg-mayan-stone hover:bg-mayan-stone/90 text-white px-6 py-2 rounded-lg font-bold transition-all inline-flex items-center gap-2"
+                >
+                  Discover More Stories
+                  <span class="material-symbols-outlined">arrow_forward</span>
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </section>
     </main>
   `,
-  styles: `
-    .about-card {
-      background-color: #1a2e23;
-      border: 4px solid var(--color-primary);
-      position: relative;
-    }
-    .about-card::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background-image: radial-gradient(circle, rgba(17, 212, 98, 0.05) 1px, transparent 1px);
-      background-size: 20px 20px;
-      pointer-events: none;
-    }
-  `,
+  styles: ``,
 })
 export default class AboutPopolVuh {
   readonly featureCards = [
