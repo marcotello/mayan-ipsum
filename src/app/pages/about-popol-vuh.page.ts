@@ -39,7 +39,6 @@ import { NgOptimizedImage } from '@angular/common';
           <h1 class="text-white text-3xl md:text-5xl font-black leading-tight tracking-tight mb-2">
             <span class="text-transparent bg-clip-text bg-linear-to-r from-primary to-mayan-teal">About the Sacred</span> Popol Vuh
           </h1>
-          <div class="inline-block px-4 py-1 bg-mayan-gold text-bg-dark font-bold rounded-full text-sm uppercase tracking-widest">The Council Book</div>
         </div>
       </section>
 
@@ -88,11 +87,15 @@ import { NgOptimizedImage } from '@angular/common';
               The text is typically organized into a preamble and four main sections based on the 1861 arrangement by Charles-Étienne Brasseur de Bourbourg
             </p>
           </div> 
-          <div class="grid md:grid-cols-3 gap-4">
+          <div class="grid md:grid-cols-2 gap-4">
             @for (card of featureCards; track card.title) {
               <div class="group flex flex-col gap-4 rounded-xl border border-border-dark bg-surface-dark p-6 transition-all hover:border-primary/50 hover:bg-surface-dark/80">
-                <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-mayan-gold/10 text-mayan-gold group-hover:bg-mayan-gold group-hover:text-background-dark transition-colors">
-                  <span class="material-symbols-outlined text-2xl">{{ card.icon }}</span>
+                <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-mayan-gold/10 text-mayan-gold group-hover:bg-mayan-gold group-hover:text-background-dark transition-colors overflow-hidden">
+                  @if (card.isSvg) {
+                    <img [ngSrc]="card.icon" alt="{{ card.title }} icon" width="32" height="32" class="w-8 h-8 object-contain transition-all group-hover:brightness-15" />
+                  } @else {
+                    <span class="material-symbols-outlined text-2xl">{{ card.icon }}</span>
+                  }
                 </div>
                 <div class="flex flex-col gap-2">
                   <h3 class="text-white text-lg font-bold leading-tight">{{ card.title }}</h3>
@@ -158,9 +161,9 @@ export default class AboutPopolVuh {
   readonly featureCards = [
     {
       icon: 'public',
-      title: 'Creation Myth',
+      title: 'The Creation',
       description:
-        'Narrates how the world was formed from the primordial sea and the failed attempts to create humans from mud and wood before corn.',
+        'Narrates how the world was formed from the primordial sea and the failed attempts to create humans from mud and wood.',
     },
     {
       icon: 'swords',
@@ -169,10 +172,17 @@ export default class AboutPopolVuh {
         'The epic adventures of Hunahpú and Xbalanqué as they outsmart the Lords of Xibalba (the underworld) in a ballgame.',
     },
     {
+      icon: '/images/corn.svg',
+      isSvg: true,
+      title: 'Men of Maize',
+      description:
+        'The successful creation of the first four humans from corn dough, the dawning of the sun, and the early migrations.',
+    },
+    {
       icon: 'history_edu',
       title: 'Mayan Lineage',
       description:
-        'A detailed account of the genealogy and migrations of the Kʼicheʼ Maya tribes up until the Spanish conquest.',
+        'A detailed account of the genealogy, wars, and migrations of the Kʼicheʼ Maya tribes up until the Spanish conquest.',
     },
   ];
 }
