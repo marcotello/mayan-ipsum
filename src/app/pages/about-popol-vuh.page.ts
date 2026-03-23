@@ -1,11 +1,10 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { NgOptimizedImage } from '@angular/common';
-import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-about-popol-vuh',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [NgOptimizedImage, RouterLink],
+  imports: [NgOptimizedImage],
   host: {
     'class': 'block',
   },
@@ -65,13 +64,15 @@ import { RouterLink } from '@angular/router';
                   spiritual wisdom, and history of the ancestors who lived in the highlands of the Mayan world.
                 </p>
               </div>
-              <div class="w-full md:w-1/3 aspect-video md:aspect-square rounded-xl shadow-xl overflow-hidden relative border-2 border-mayan-stone/20">
-                <img
-                  ngSrc="/images/mayan-glyph.jpg"
-                  alt="Mayan stone glyph representing wisdom"
-                  fill
-                  class="object-cover"
-                />
+              <div class="p-[20px] w-full md:w-1/2 aspect-[1090/703] rounded-xl shadow-xl overflow-hidden relative border-2 border-mayan-stone/20 bg-linear-to-b from-[#f8f4f0] to-[#f5eee6]">
+                <div class="relative w-full h-full">
+                  <img
+                    ngSrc="/images/passage.jpg"
+                    alt="A passage from the Popol Vuh"
+                    fill
+                    class="object-contain"
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -122,24 +123,26 @@ import { RouterLink } from '@angular/router';
           <div class="parchment-texture rounded-xl shadow-2xl overflow-hidden border-4 border-mayan-stone relative">
             <div class="p-8 md:p-12 flex flex-col md:flex-row items-center gap-10">
               <div class="flex-1 space-y-4">
-                <h2 class="text-3xl font-bold text-mayan-stone font-display">The Jungle's Memory</h2>
+                <h2 class="text-3xl font-bold text-mayan-stone font-display">The Mayan Legacy</h2>
                 <p class="text-stone-700 leading-relaxed">
-                  Just as the jungle thrives with interconnected life, the Popol Vuh connects the Maya
-                  people to their celestial and terrestrial origins. Every glyph tells a story of survival,
-                  magic, and the eternal cycle of time.
+                  The Popol Vuh stands as the most comprehensive and profound surviving record of Maya cosmology, history, and 
+                  spiritual belief. Often referred to as the "Maya Bible" or the "Book of the Council," this monumental work offers 
+                  an unparalleled window into the worldview of the pre-Columbian Americas.
                 </p>
                 <img
                   ngSrc="/images/popol-vuh.png"
                   alt="Popol Vuh Illustration"
                   width="800"
                   height="400"
-                  class="w-full object-cover rounded-xl shadow-md border-2 border-mayan-stone/20 my-4"
+                  class="mt-10 w-full object-cover rounded-xl shadow-md border-2 border-mayan-stone/20 my-4"
                 />
                 <a
-                  routerLink="/"
-                  class="bg-mayan-stone hover:bg-mayan-stone/90 text-white px-6 py-2 rounded-lg font-bold transition-all inline-flex items-center gap-2"
+                  href="https://en.wikipedia.org/wiki/Popol_Vuh"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="mt-10 ml-auto w-fit bg-mayan-stone hover:bg-mayan-stone/90 text-white px-6 py-2 rounded-lg font-bold transition-all flex items-center gap-2"
                 >
-                  Discover More Stories
+                  Discover More
                   <span class="material-symbols-outlined">arrow_forward</span>
                 </a>
               </div>
