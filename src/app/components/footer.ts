@@ -10,8 +10,8 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
     <footer class="bg-bg-dark border-t border-primary/10 py-10">
       <div class="px-4 md:px-12 flex flex-col md:flex-row justify-between items-center gap-6 max-w-7xl mx-auto">
         <div class="flex items-center gap-3 text-white">
-          <div class="size-6 text-primary">
-            <span class="material-symbols-outlined">temple_hindu</span>
+          <div class="size-6">
+            <img src="/images/mayan-pyramid.svg" alt="Mayan Pyramid" class="w-full h-full" />
           </div>
           <span class="font-bold tracking-tight">Mayan Ipsum</span>
         </div>
@@ -34,4 +34,4 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
     </footer>
   `,
 })
-export class Footer {}
+export class Footer { }

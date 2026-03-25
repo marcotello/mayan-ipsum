@@ -13,8 +13,8 @@ import { IpsumStateService } from '../services/ipsum-state.service';
     <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-primary/20 bg-bg-dark/95 backdrop-blur-sm px-6 py-4 lg:px-12 relative z-50">
       <a routerLink="/" (click)="closeMenu()">  
         <div class="flex items-center gap-4 text-white">
-          <div class="size-8 text-primary">
-            <span class="material-symbols-outlined text-4xl!">temple_hindu</span>
+          <div class="size-9">
+            <img src="/images/mayan-pyramid.svg" alt="Mayan Pyramid" class="w-full h-full" />
           </div>
           <h2 class="text-white text-xl font-bold leading-tight tracking-[-0.015em] hidden sm:block">Mayan Ipsum</h2>
         </div>
@@ -54,9 +54,7 @@ import { IpsumStateService } from '../services/ipsum-state.service';
         <div class="fixed inset-0 bg-[#0e2218] backdrop-blur-xl z-40 md:hidden flex flex-col items-center justify-center pt-20">
           <nav class="flex flex-col items-center gap-8 text-2xl font-bold font-display w-full">
             <a class="text-white hover:text-primary transition-colors block w-full text-center py-2" routerLink="/" (click)="closeMenu()">Home</a>
-            <a class="text-white hover:text-primary transition-colors block w-full text-center py-2" routerLink="/home2" (click)="closeMenu()">Home 2</a>
             <a class="text-white hover:text-primary transition-colors block w-full text-center py-2" routerLink="/about-popol-vuh" (click)="closeMenu()">About Popol Vuh</a>
-            <a class="text-white hover:text-primary transition-colors block w-full text-center py-2" href="#" (click)="closeMenu()">Contact</a>
             
             <button
               (click)="onGenerateClick()"
