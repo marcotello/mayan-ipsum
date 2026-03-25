@@ -32,7 +32,7 @@ import { IpsumStateService } from '../services/ipsum-state.service';
           (click)="onGenerateClick()"
           class="flex items-center justify-center rounded-xl h-10 px-4 bg-primary hover:bg-primary/90 text-bg-dark text-sm font-bold transition-all shadow-lg shadow-primary/20 cursor-pointer hover:-translate-y-0.5"
         >
-          <span class="material-symbols-outlined mr-2 text-lg">refresh</span>
+          <span class="material-symbols-outlined mr-2 text-lg">temp_preferences_custom</span>
           <span>Generate New</span>
         </button>
       </div>
@@ -62,7 +62,7 @@ import { IpsumStateService } from '../services/ipsum-state.service';
               (click)="onGenerateClick()"
               class="mt-8 flex items-center justify-center rounded-2xl h-14 px-8 bg-primary hover:bg-primary/90 text-bg-dark font-bold transition-all shadow-xl shadow-primary/20 cursor-pointer active:scale-95 text-xl"
             >
-              <span class="material-symbols-outlined mr-3 text-3xl">refresh</span>
+              <span class="material-symbols-outlined mr-3 text-3xl">temp_preferences_custom</span>
               <span>Generate New Text</span>
             </button>
           </nav>
