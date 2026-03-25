@@ -49,25 +49,57 @@ import { IpsumStateService } from '../services/ipsum-state.service';
         </span>
       </button>
 
-      <!-- Mobile Full-Screen Drawer Overlay -->
+      <!-- Mobile Drawer Backdrop -->
       @if (isMenuOpen()) {
-        <div class="fixed inset-0 bg-[#0e2218] backdrop-blur-xl z-40 md:hidden flex flex-col items-center justify-center pt-20">
-          <nav class="flex flex-col items-center gap-8 text-2xl font-bold font-display w-full">
-            <a class="text-white hover:text-primary transition-colors block w-full text-center py-2" routerLink="/" (click)="closeMenu()">Home</a>
-            <a class="text-white hover:text-primary transition-colors block w-full text-center py-2" routerLink="/about-popol-vuh" (click)="closeMenu()">About Popol Vuh</a>
-            
-            <button
-              (click)="onGenerateClick()"
-              class="mt-8 flex items-center justify-center rounded-2xl h-14 px-8 bg-primary hover:bg-primary/90 text-bg-dark font-bold transition-all shadow-xl shadow-primary/20 cursor-pointer active:scale-95 text-xl"
-            >
-              <span class="material-symbols-outlined mr-3 text-3xl">temp_preferences_custom</span>
-              <span>Generate New Text</span>
+        <div
+          class="fixed inset-0 bg-black/50 z-40 md:hidden"
+          (click)="closeMenu()"
+        ></div>
+
+        <!-- Mobile Drawer (slides in from right) -->
+        <div class="mobile-drawer fixed top-0 right-0 w-72 h-[100vh] bg-[#0a1c12] border-l border-primary/20 z-50 md:hidden flex flex-col shadow-2xl shadow-black/60">
+          <!-- Drawer Header -->
+          <div class="flex items-center justify-between px-6 py-4 border-b border-primary/20">
+            <div class="flex items-center gap-3">
+              <div class="size-7">
+                <img src="/images/mayan-pyramid.svg" alt="Mayan Pyramid" class="w-full h-full" />
+              </div>
+              <span class="text-white font-bold">Mayan Ipsum</span>
+            </div>
+            <button class="text-white/60 hover:text-white transition-colors cursor-pointer" (click)="closeMenu()">
+              <span class="material-symbols-outlined text-2xl">close</span>
             </button>
+          </div>
+
+          <!-- Drawer Nav Links -->
+          <nav class="flex flex-col gap-1 px-4 py-6 flex-1 bg-[#0a1c12]">
+            <a
+              class="text-white/80 hover:text-primary hover:bg-primary/10 transition-colors text-lg font-semibold px-4 py-3 rounded-xl flex items-center gap-3"
+              routerLink="/"
+              (click)="closeMenu()"
+            >
+              <span class="material-symbols-outlined text-primary/70">home</span>
+              Home
+            </a>
+            <a
+              class="text-white/80 hover:text-primary hover:bg-primary/10 transition-colors text-lg font-semibold px-4 py-3 rounded-xl flex items-center gap-3"
+              routerLink="/about-popol-vuh"
+              (click)="closeMenu()"
+            >
+              <span class="material-symbols-outlined text-primary/70">menu_book</span>
+              About Popol Vuh
+            </a>
           </nav>
 
-          <!-- Decorative element for mobile drawer -->
-          <div class="absolute bottom-10 opacity-10 pointer-events-none">
-            <span class="material-symbols-outlined" style="font-size: 15rem;">temple_hindu</span>
+          <!-- Generate Button -->
+          <div class="px-6 pb-8 bg-[#0a1c12]">
+            <button
+              (click)="onGenerateClick()"
+              class="w-full flex items-center justify-center rounded-xl h-12 px-6 bg-primary hover:bg-primary/90 text-bg-dark font-bold transition-all shadow-lg shadow-primary/20 cursor-pointer active:scale-95 text-base gap-2"
+            >
+              <span class="material-symbols-outlined text-xl">temp_preferences_custom</span>
+              <span>Generate New Text</span>
+            </button>
           </div>
         </div>
       }
