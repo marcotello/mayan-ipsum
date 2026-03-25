@@ -49,18 +49,14 @@ type TextLength = 'S' | 'M' | 'L';
 
             <!-- Left: Visual/Controls -->
             <div class="w-full md:w-1/3 flex flex-col gap-6">
-              <div class="relative aspect-4/3 w-full rounded-lg overflow-hidden border-2 border-mayan-stone/20 shadow-inner bg-stone-200">
+              <div class="relative aspect-4/3 rounded-lg overflow-hidden border-2 border-mayan-stone/20 shadow-inner bg-white p-10">
                 <img
-                  ngSrc="/images/tikal-pyramid.jpg"
-                  alt="Ancient Mayan pyramid in Tikal surrounded by jungle mist"
+                  [ngSrc]="randomSymbolImage()"
+                  alt="Ancient Mayan symbol from the Popol Vuh"
                   fill
                   priority
-                  class="object-cover opacity-90 hover:scale-105 transition-transform duration-700"
+                  class="object-contain hover:scale-105 transition-transform duration-700 scale-80"
                 />
-                <div class="absolute bottom-0 left-0 right-0 bg-linear-to-t from-black/80 to-transparent p-4">
-                  <p class="text-white text-xs font-bold uppercase tracking-wider">Source Material</p>
-                  <p class="text-white text-sm">Popol Vuh: The Book of the People</p>
-                </div>
               </div>
 
               <div class="bg-white/50 backdrop-blur-sm rounded-lg p-4 border border-stone-300">
@@ -118,6 +114,13 @@ type TextLength = 'S' | 'M' | 'L';
                   </button>
                   <button
                     class="text-stone-500 hover:text-mayan-teal transition-colors cursor-pointer"
+                    title="Copy to Clipboard"
+                    (click)="copyToClipboard()"
+                  >
+                    <span class="material-symbols-outlined">{{ copied() ? 'check' : 'content_copy' }}</span>
+                  </button>
+                  <button
+                    class="text-stone-500 hover:text-mayan-teal transition-colors cursor-pointer"
                     title="Download TXT"
                     (click)="downloadText()"
                   >
@@ -169,6 +172,12 @@ export class IpsumGenerator {
   paragraphCount = signal(3);
   textLength = signal<TextLength>('S');
   copied = signal(false);
+
+  randomSymbolImage = computed(() => {
+    const trigger = this.ipsumState.generateTrigger();
+    const index = (Math.abs(trigger * 2654435761) % 8) + 1;
+    return `/images/mayan-symbol-${index}.jpeg`;
+  });
 
   displayedParagraphs = computed(() => {
     this.ipsumState.generateTrigger();
