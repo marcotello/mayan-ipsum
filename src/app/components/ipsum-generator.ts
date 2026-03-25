@@ -55,7 +55,8 @@ type TextLength = 'S' | 'M' | 'L';
                   alt="Ancient Mayan symbol from the Popol Vuh"
                   fill
                   priority
-                  class="object-contain hover:scale-105 transition-transform duration-700 scale-80"
+                  class="object-contain group-hover:scale-85 transition-transform duration-300 scale-80"
+                  (click)="regenerate()"
                 />
               </div>
 
@@ -170,7 +171,7 @@ export class IpsumGenerator {
   readonly sizes: TextLength[] = ['S', 'M', 'L'];
 
   paragraphCount = signal(3);
-  textLength = signal<TextLength>('S');
+  textLength = signal<TextLength>('M');
   copied = signal(false);
 
   randomSymbolImage = computed(() => {
