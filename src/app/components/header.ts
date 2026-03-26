@@ -57,7 +57,7 @@ import { IpsumStateService } from '../services/ipsum-state.service';
         ></div>
 
         <!-- Mobile Drawer (slides in from right) -->
-        <div class="mobile-drawer fixed top-0 right-0 w-72 h-[100vh] bg-[#0a1c12] border-l border-primary/20 z-50 md:hidden flex flex-col shadow-2xl shadow-black/60">
+        <div class="mobile-drawer fixed top-0 right-0 w-full h-[120vh] bg-[#0a1c12] border-l border-primary/20 z-50 md:hidden flex flex-col shadow-2xl shadow-black/60">
           <!-- Drawer Header -->
           <div class="flex items-center justify-between px-6 py-4 border-b border-primary/20">
             <div class="flex items-center gap-3">
@@ -72,7 +72,7 @@ import { IpsumStateService } from '../services/ipsum-state.service';
           </div>
 
           <!-- Drawer Nav Links -->
-          <nav class="flex flex-col gap-1 px-4 py-6 flex-1 bg-[#0a1c12]">
+          <nav class="flex flex-col gap-1 px-4 py-6 bg-[#0a1c12]">
             <a
               class="text-white/80 hover:text-primary hover:bg-primary/10 transition-colors text-lg font-semibold px-4 py-3 rounded-xl flex items-center gap-3"
               routerLink="/"
@@ -92,7 +92,7 @@ import { IpsumStateService } from '../services/ipsum-state.service';
           </nav>
 
           <!-- Generate Button -->
-          <div class="px-6 pb-8 bg-[#0a1c12]">
+          <div class="px-6 pb-8 mt-5 bg-[#0a1c12]">
             <button
               (click)="onGenerateClick()"
               class="w-full flex items-center justify-center rounded-xl h-12 px-6 bg-primary hover:bg-primary/90 text-bg-dark font-bold transition-all shadow-lg shadow-primary/20 cursor-pointer active:scale-95 text-base gap-2"
