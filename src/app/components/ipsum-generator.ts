@@ -3,27 +3,27 @@ import { NgOptimizedImage } from '@angular/common';
 import { IpsumStateService } from '../services/ipsum-state.service';
 
 const KICHE_PARAGRAPHS_SHORT = [
-  `Are u' paxik, u' c'aslemal ri', ri' u' tz'ibaxik. Wa'e' k'ut u' ch'a'tem, u' tzijoxik ri' chi'. Are u' xebal, u' tikarib'al, u' jek'al wuj.`,
-  `K'a tz'inilik, k'a chamamik. K'a silan, k'a loman. K'a ca'n, k'a ch'a'n. K'a catz'in, k'a ca'lol. Xa' u' ch'a'tem, u' tzijoxik.`,
-  `Mawi k'o, mawi k'o jun winak, jun chicop, jun tz'i', jun ak'. Xa' u' ch'a'tem, u' tzijoxik.`,
-  `Xax k'o wi ri kaqulja, ri' ch'umil, ri' q'ij. K'a tz'inilik, k'a chamamik. K'a silan, k'a loman.`,
-  `Are k'ut u' xe'nabal, u' tikarib'al, u' ch'a'tem chik. Ta x-ch'a'tex, ta x-tzijox. K'a tz'inilik, k'a chamamik.`,
+  `Ma k' u xutzinik xech' awik k'eje ta ri winaq. Xa kewachelajik, xa kek' aralajik, xa kewojonik; rnawi xwachinik uwach kich' ab' al.`,
+  `Jalajoj xkoq' ib' ej chi kij uj unal. Ta xkita ri Tz' aqol, B' itol, rnawi mixutzinik, mixech' awik.`,
+  `Xecha' chik chi kib'il kib'. Mawi mixutzin ub'ixik qab'i'; rurnal oj kaj tz'aq, oj pu kajb'it: mawi utz!`,
+  `Xecha' chik chi kib' il kib' ri Al om, K' ajolom. Xe'uchax k'ut. Xa kixjalatajik rumal mawi mixutzinik, mawi mixixch'awik.`,
+  `Mi k' u xqajal qatzij; iwecha',  ik' uxun iwarab'al, iyaka lib' al. Ri wech 15 wi mixe' uxik siwan k'echelaj.`,
 ];
 
 const KICHE_PARAGRAPHS_MEDIUM = [
-  `Are u' paxik, u' c'aslemal ri', ri' u' tz'ibaxik. Wa'e' k'ut u' ch'a'tem, u' tzijoxik ri' chi'. Are u' xebal, u' tikarib'al, u' jek'al wuj. Waral k'ut xtzi'bax wi'. Ta' ch'a'tem, ta' tzijonem. Xa' u' ch'a'tem, u' tzijoxik.`,
-  `K'a tz'inilik, k'a chamamik. K'a silan, k'a loman. K'a ca'n, k'a ch'a'n. K'a catz'in, k'a ca'lol. Xa' u' ch'a'tem, u' tzijoxik. K'a tz'inilik, k'a chamamik. K'a silan, k'a loman. Keje k'ut xax k'o wi ri kaqulja, ri' ch'umil, ri' q'ij.`,
-  `Mawi k'o, mawi k'o jun winak, jun chicop, jun tz'i', jun ak', jun k'o, jun che', jun abaj, jun k'o, jun sivan, jun k'o, jun k'im, jun k'o. Xa' u' ch'a'tem, u' tzijoxik. Ta x-ch'a'tex, ta x-tzijox ri' nab'e tzij.`,
-  `Xax k'o wi ri kaqulja, ri' ch'umil, ri' q'ij. K'a tz'inilik, k'a chamamik. K'a silan, k'a loman. Are k'ut u' xe'nabal, u' tikarib'al, u' ch'a'tem chik. Xa' u' ch'a'tem, u' tzijoxik ri' chi'.`,
-  `Ta x-ch'a'tex, ta x-tzijox ri' nab'e tzij, nab'e ch'a'tem. K'a tz'inilik, k'a chamamik. Are u' paxik, u' c'aslemal ri'. Wa'e' k'ut u' ch'a'tem, u' tzijoxik ri' chi'. K'a silan, k'a loman.`,
+  `Xa k'u tija chik mixyopij rawexik usaqirik. Qab'ana' tzuqul qe, k'ool qe. Ju pa cha ta kojsik'ixoq, ta kojnab'ax puch chuwach ulew? Mixqatijo chi rech ri nab'e qatz'aq, qab'it.`,
+  `Mawi mixutzinik qaq'ijiloxik, qaq' alajixik puch kumal. K'eje k'ut qatija wi ub'anik ajnim, ajxob'. Tzuqul, k'ool! Xecha'. Ta utz'aqik k'ut, ub' anik puch ulew, xoq' o'l utyo'jil xkib' ano.`,
+  `Ma ku utz xkilo: xa chi yojomanik, xa tzub' ulik, xa neb' elik, xa lub' anik, xa wulanik, xa pu chi'umarik. Mawi chi k' olol ujolom, xa j un b'enaq wi uwach, xa ku' l uwach.`,
+  `Tajin kasik'ij uwach wa' rumal Popol Mayab ri' K'ajolom. Mawi chi mukun chi rij. Chi ch'aw nab'e maja b'i una'oj . xa jusuk' chi'umar pa ja'. Mawi k'o-; xecha' chi k'u ri Ajtz'aq, Ajb'it.`,
+  `AchJab'eq! Ta chuxoq! Xa lab'e mawi chib'inik, ma pu chipoq'otajik. Ta chuxoq! Xa una'oj chiri'! Xecha'. Ta xkiyoj k'ut, xkiyoq' chik ri kitz' aq, kib'it. Xecha' chi k'ut. Chutzin ta wi, chinawachir ta wi q'ijiloy qech, siq'iy qech? Xecha' ta xkina'ojij.`,
 ];
 
 const KICHE_PARAGRAPHS_LONG = [
-  `Are u' paxik, u' c'aslemal ri', ri' u' tz'ibaxik. Wa'e' k'ut u' ch'a'tem, u' tzijoxik ri' chi'. Are u' xebal, u' tikarib'al, u' jek'al wuj. Waral k'ut xtzi'bax wi'. Ta' ch'a'tem, ta' tzijonem. Xa' u' ch'a'tem, u' tzijoxik. K'a tz'inilik, k'a chamamik. K'a silan, k'a loman. K'a ca'n, k'a ch'a'n. K'a catz'in, k'a ca'lol. Xa' u' ch'a'tem, u' tzijoxik.`,
-  `K'a tz'inilik, k'a chamamik. K'a silan, k'a loman. K'a ca'n, k'a ch'a'n. K'a catz'in, k'a ca'lol. Xa' u' ch'a'tem, u' tzijoxik. K'a tz'inilik, k'a chamamik. K'a silan, k'a loman. Keje k'ut xax k'o wi ri kaqulja, ri' ch'umil, ri' q'ij. Are k'ut u' xe'nabal, u' tikarib'al, u' ch'a'tem chik. Ta x-ch'a'tex, ta x-tzijox ri' nab'e tzij, nab'e ch'a'tem.`,
-  `Mawi k'o, mawi k'o jun winak, jun chicop, jun tz'i', jun ak', jun k'o, jun che', jun abaj, jun k'o, jun sivan, jun k'o, jun k'im, jun k'o. Xa' u' ch'a'tem, u' tzijoxik. Ta x-ch'a'tex, ta x-tzijox ri' nab'e tzij. Are u' paxik, u' c'aslemal ri', ri' u' tz'ibaxik. Wa'e' k'ut u' ch'a'tem, u' tzijoxik ri' chi'.`,
-  `Xax k'o wi ri kaqulja, ri' ch'umil, ri' q'ij. K'a tz'inilik, k'a chamamik. K'a silan, k'a loman. Are k'ut u' xe'nabal, u' tikarib'al, u' ch'a'tem chik. Xa' u' ch'a'tem, u' tzijoxik ri' chi'. Ta x-ch'a'tex, ta x-tzijox. K'a ca'n, k'a ch'a'n. K'a catz'in, k'a ca'lol. Mawi k'o jun winak, jun chicop.`,
-  `Ta x-ch'a'tex, ta x-tzijox ri' nab'e tzij, nab'e ch'a'tem. K'a tz'inilik, k'a chamamik. Are u' paxik, u' c'aslemal ri'. Wa'e' k'ut u' ch'a'tem, u' tzijoxik ri' chi'. K'a silan, k'a loman. Keje k'ut xax k'o wi ri kaqulja, ri' ch'umil. Mawi k'o, mawi k'o jun winak. Xa' u' ch'a'tem, u' tzijoxik.`,
+  `Ta xkib'ij chi rech ajq' ij, ajb'it, e nik'wachinel. Xa k'ulu xa pu churiqo che ta chik chiqawinaq-b'itoj, chiqawinaq-tz' aqoj ta chik tzuqul, k'ool, kojsik'ix taj, kojnab' ax taj puch. Katok ta k'ut pa tzij Iyom, Mamom; qati' t qamam; Xpiyakok, Xmukane. Cha taj ta chawaxoq, ta saqiroq.`,
+  `Qasik' ixik, qatoq' exik, qanab' axik rumal winaq tz'aq, winaq b' it, wmaq poy, winaq anom; cha ta chuxoq! Chik' utun ib'i' Junajpu Wuch', Junajpu Utiw; Kamu l Alam, Kamul K' ajolom; Nim Aq, Nima Sis, Ajk' uwal, Ajyamanik, Ajch' ut, Ajtz' alam, Ajraxa laq, Ajraxa tzel.`,
+  `Ajq' ol, Aj tol tekat 23, Rati't Q'ij, Rati't Saq; kixucha'xik rumal qatz'aq, qab'it! Tajin kasik'ij uwach wa' rumal Popol Mayab ri'. Chimala chi ixim, ·chi tz' ite' xa chib' ana tajik, xa pu chel apanoq, chiq'ajaj, chik' ak' otaj puch uchi', uwach che'-.`,
+  `Xe'ucha'xik e ajq'ij. K'ate puch uqajik, uq'ijiloxik ri xmalik chi ixim, chi tz' ite'. Q'ij, b'it! Xecha' k'u ri jun ati't, jun mama' chi kech. Ri mama' ajtz'ite', Xpiyakok ub'i'; are k'u ri ati't ajq'ij, ajb'it chi raqan, Xrnukane ub'i'. Xecha' k' ut ta xkitikib'a' q'ij.`,
+  `Xa chuk'ulu, xa pu churiqo chab'ij, kuta qaxikin, kach'awik, katzijon taj. Xa chuk' ulu ri che' chajawaxik, chik'otox puch kurnal Ajtz'aq, Ajb'it. We are tzuqul, k'ool; ta chawaxoq, ta saqiroq! at ixirn, at tz'ite'; at q' ij, at b'it katchokonik, kattaqen taj-. Xcha' chi re ixim, tz'ite'. Katk'ix la uloq at Uk'ux Kaj, ma qajisaj uchi', uwach Tepew, Q' ukurnatz-. Xecha' ta xkib'ij k'ut usuk'ulikil. Tajin kasik'ij uwach wa' rumal Popol Mayab ri' Wene de suk'ulik Ajam che'. Utz are chuxik ri ipoy, ajam che' chich'awik, chitzijon b'a la chuwach ulew.`,
 ];
 
 type TextLength = 'S' | 'M' | 'L';
